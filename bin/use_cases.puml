@@ -1,0 +1,8 @@
+@startuml Usecase
+left to right direction
+
+actor "client" as client
+rectangle "Plateforme de livraison de repas" {
+  (Encoder un nouveau composant) as UC1
+  (Enregistrer un contenu) as UC2
+}
