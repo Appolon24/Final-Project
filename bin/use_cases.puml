@@ -1,8 +1,34 @@
 @startuml Usecase
 left to right direction
 
-actor "client" as client
+actor "client" as cl1
+actor "restaurant" as resto
+actor "livreur" as liv
+actor "gestionnaire" as boss
 rectangle "Plateforme de livraison de repas" {
-  (Encoder un nouveau composant) as UC1
-  (Enregistrer un contenu) as UC2
+  (UC1: lister les restaurants) as UC1
+  (UC2: passer les commandes) as UC2
+  (UC3: lister les commandes à préparer) as UC3
+  (UC4: marquer les commandes comme prêtes) as UC4
+  (UC5: livrer une commande) as UC5
+  (UC6: lister les commandes) as UC6
+  (UC7: annuler une commande) as UC7
+  (UC8: vider la pile de commande) as UC8
+
+
+cl1-->UC1
+cl1-->UC2
+resto-->UC3
+resto-->UC4
+liv-->UC5
+boss-->UC6
+boss-->UC7
+boss-->UC8
+
 }
+
+
+
+
+
+@enduml
